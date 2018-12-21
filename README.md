@@ -14,3 +14,11 @@ Spring 4.0  ------->  2014
   --  Support Java 8
 
 ```
+
+
+##### Dependency Injection
+* A dependency is an attribute(instance variable) of class(Eventually become reference to an Object)
+* A dependency is injected either using setter method or using constructor arguments.
+* We define metadata using xml configuation or annotations that defined what dependencies to inject.
+* The process of injecting dependencies is called wiring and it put all the wired objec in spring container.
+* Spring manages the beans lifecycle.
