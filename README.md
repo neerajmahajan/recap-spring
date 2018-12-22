@@ -15,7 +15,6 @@ Spring 4.0  ------->  2014
 
 ```
 
-
 ##### Dependency Injection
 * A dependency is an attribute(instance variable) of class(Eventually become reference to an Object)
 * A dependency is injected either using setter method or using constructor arguments.
@@ -44,3 +43,24 @@ Spring 4.0  ------->  2014
   * If the dependencies are mandatory.
 * Use Setter Injection
   * When we have optional property.
+###### Bean Scope
+* By Default, all spring managed beans are singletons.
+* Setting the scope to protype returns a new instance everytime.
+* Other scope are request etc..
+
+###### Instantiating object through static method and by using non static method of other bean (While using xml configuration).
+* for creating object using static method use factory-method
+* for creating object by calling method on some other bean use factory-bean and factory-method together.
+
+###### Initialization and Destruction
+```
+@Bean(initMethod="", destroyMethod="")
+
+or
+
+inside class use 
+@PostConstruct
+@PreDestroy
+
+Remeber destroMethod or PreDestroy is called before the object gets destroy.. this will not get called if the scope is prototype.
+```
