@@ -4,6 +4,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import learn.spring.configuration.ControllerConfiguration;
+import learn.spring.controller.Controller;
 import learn.spring.controller.LoginController;
 import learn.spring.entity.PremiumUser;
 import learn.spring.entity.User;
@@ -14,10 +15,11 @@ public class MainClassUsingJavaConfiguration {
 		
 		ApplicationContext appContext = new AnnotationConfigApplicationContext(ControllerConfiguration.class);
 		
-		LoginController loginController = appContext.getBean("loginController", LoginController.class);
+		Controller loginController = appContext.getBean("loginController", Controller.class);
+		
 		
 		User user = new PremiumUser("Neeraj","XYZ");
-		System.out.println("User Validation " + loginController.validateUser(user));
+		//System.out.println("User Validation " + loginController.validateUser(user));
 
 	}
 }
