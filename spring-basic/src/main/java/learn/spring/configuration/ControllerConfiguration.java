@@ -1,5 +1,9 @@
 package learn.spring.configuration;
 
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -15,12 +19,25 @@ import learn.spring.view.View;
  */
 @Configuration
 @Import({ ModelConfiguration.class, ViewConfiguration.class })
+//@ComponentScan(basePackages={"learn.spring"})
 public class ControllerConfiguration {
+	
+	@Autowired // This autowires by Type first
+	private Model loginModel;
+	
+	@Autowired @Qualifier("lloginModel")
+	private Model otherLoginModel;
+	
+	@Resource // This autowires by propertyName first // Standard Annotation
+	private Model logModel;
+	
 	@Bean
-	Controller loginConroller(Model loginModel, View loginView) {
+	Controller loginConroller(View loginView) {
 		LoginController controller = new LoginController();
 		controller.setModel(loginModel);
 		controller.setView(loginView);
+		System.out.println(otherLoginModel.getModelName());
+		System.out.println(logModel.getModelName());
 		return controller;
 	}
 }

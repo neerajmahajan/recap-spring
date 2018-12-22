@@ -10,6 +10,8 @@ public class LoginController extends AbstractController {
 	}
 
 	public boolean validateUser(User user) {
+		
+		System.out.println("Model connected is  " + getModel().getModelName());
 
 		String userName = user.getUserName();
 		String password = user.getPassword();

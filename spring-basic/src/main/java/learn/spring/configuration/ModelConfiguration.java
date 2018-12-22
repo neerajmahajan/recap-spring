@@ -10,7 +10,17 @@ import learn.spring.model.Model;
 public class ModelConfiguration {
 	@Bean
 	public Model loginModel(){
-		return new LoginModel();
+		return new LoginModel("loginModel");
+	}
+	
+	@Bean
+	public Model lloginModel(){
+		return new LoginModel("lloginModel");
+	}
+	
+	@Bean
+	public Model logModel(){
+		return new LoginModel("logModel");
 	}
 
 }
