@@ -13,5 +13,13 @@
 	</bean>
 	<bean id="loginModel" class="learn.spring.model.LoginModel" />
 	<bean id="loginView" class="learn.spring.view.LoginView" />
+	
+	<!-- Below factory-method is used to instantiate a class using the static method(getInstance) defined in java.text.NumberFormat -->
+	<bean id="nf" class="java.text.NumberFormat" factory-method="getInstance" />
+	
+	<bean id="dbf" class="javax.xml.parsers.DocumentBuilderFactory" factory-method="newInstance" />
+	
+	<!-- Below bean definition is creating a bean instance by calling a non static method from the object of above bean  -->
+	<bean id="db" class="javax.xml.parsers.DocumentBuilder" factory-bean="dbf" factory-method="newDocumentBuilder"
 
 </beans>
