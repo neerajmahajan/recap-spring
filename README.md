@@ -22,3 +22,7 @@ Spring 4.0  ------->  2014
 * We define metadata using xml configuation or annotations that defined what dependencies to inject.
 * The process of injecting dependencies is called wiring and it put all the wired objec in spring container.
 * Spring manages the beans lifecycle.
+
+
+##### Java Configuration
+* Spring assumes the objects it creates are singleton and will not recreated it, if it is already there. even when we have implemened the Bean annotated method with new keyword. It internally extends the Configuration class.
