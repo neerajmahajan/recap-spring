@@ -32,7 +32,7 @@ public class ControllerConfiguration {
 	private Model logModel;
 	
 	@Bean
-	Controller loginConroller(View loginView) {
+	Controller loginController(View loginView) {
 		LoginController controller = new LoginController();
 		controller.setModel(loginModel);
 		controller.setView(loginView);
