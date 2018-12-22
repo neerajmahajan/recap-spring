@@ -26,3 +26,4 @@ Spring 4.0  ------->  2014
 
 ##### Java Configuration
 * Spring assumes the objects it creates are singleton and will not recreated it, if it is already there. even when we have implemened the Bean annotated method with new keyword. It internally extends the Configuration class.
+* AnnotationConfigApplicationContext
