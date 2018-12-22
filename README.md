@@ -64,3 +64,9 @@ inside class use
 
 Remeber destroMethod or PreDestroy is called before the object gets destroy.. this will not get called if the scope is prototype.
 ```
+##### AOP
+* Join Point : Place where some additional functionality can be applied (Spring allows all public methods managed by spring managed beans)
+* Pointcut : Expression that state where functionality can be applied (Actual jointpoint we have declared).
+* Advice : The fucntionality we want to apply.
+* Aspect : Combines pointcut and advice.
+* Weaving :The process of applying an aspect to our system.
