@@ -33,6 +33,7 @@ Spring 4.0  ------->  2014
 * It first tries to wire by Type.
 * If multiple bean declaration are found, then it tries to wire by beanName. If none works it throws an exception.
 * It is also autowired, if the class is annotated by @Component using the above order of preference AND @ComponentScan is used.
+* If we autowire a collection property it will put all the found beans in that collection.
 
 ###### @Resource
 * It is the standard autowiring annotation that wires by propertyName.
