@@ -37,3 +37,10 @@ Spring 4.0  ------->  2014
 
 ###### @Resource
 * It is the standard autowiring annotation that wires by propertyName.
+
+###### Constructor vs Setter Injection (Guidelines)
+* Use Constructor Injection
+  * For immutable beans.
+  * If the dependencies are mandatory.
+* Use Setter Injection
+  * When we have optional property.
