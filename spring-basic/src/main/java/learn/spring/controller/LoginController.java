@@ -1,11 +1,18 @@
 package learn.spring.controller;
 
+
+import java.util.logging.Logger;
+
 import learn.spring.entity.User;
 
 public class LoginController extends AbstractController {
+	
+	Logger logger = Logger.getLogger(getClass().getName());
 
 	@Override
 	public void updateView() {
+		
+		logger.info("&&&& Update View is called &&&&");
 
 	}
 

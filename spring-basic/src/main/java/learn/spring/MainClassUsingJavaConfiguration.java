@@ -19,6 +19,7 @@ public class MainClassUsingJavaConfiguration {
 		Model model = appContext.getBean("loginModel",Model.class);
 		
 		loginController.setModel(model);
+		loginController.updateView();
 		
 		
 		User user = new PremiumUser("Neeraj","XYZ");
