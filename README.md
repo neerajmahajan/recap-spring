@@ -54,6 +54,7 @@ Spring 4.0  ------->  2014
 
 ###### Initialization and Destruction
 ```
+Thes methods should not take any arguments
 @Bean(initMethod="", destroyMethod="")
 
 or
@@ -70,3 +71,4 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * Advice : The fucntionality we want to apply.
 * Aspect : Combines pointcut and advice.
 * Weaving :The process of applying an aspect to our system.
+* use @EnableAspectJAutoProxy : Be default it can proxy interfaces, but if classes needs to be proxied, then cglib library is required.
