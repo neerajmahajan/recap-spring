@@ -37,10 +37,10 @@ public class ControllerConfiguration {
 	@Bean
 	public Controller loginController(View loginView) {
 		Controller controller = new LoginController();
-		controller.setModel(loginModel);
-		controller.setView(loginView);
-		System.out.println(otherLoginModel.getModelName());
-		System.out.println(logModel.getModelName());
+		//controller.setModel(loginModel);
+		//controller.setView(loginView);
+		//System.out.println(otherLoginModel.getModelName());
+		//System.out.println(logModel.getModelName());
 		return controller;
 	}
 }

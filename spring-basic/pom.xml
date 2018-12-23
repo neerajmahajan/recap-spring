@@ -86,11 +86,11 @@
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
 		</dependency>
-		<dependency>
+		<!-- dependency>
     <groupId>cglib</groupId>
     <artifactId>cglib</artifactId>
     <version>3.2.5</version>
-</dependency>
+</dependency-->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
