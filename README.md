@@ -79,3 +79,13 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * @AfterTransaction  : Opposite to above.
 * @Commit : If applied at class level then every test will commit its state
 * @Rollback : It is used to override the test method with default commit state.
+##### Transactions
+* A  ====== ALL or Nothing (IMPORTANT). eg customer order -- inventory decution, credit card deduction.
+* C  ====== Integrity constrainst are maintained within the database with every transaction.
+* I  ======  
+* D  ====== Comitted changes are permanent. 
+
+* Apply @Transactional : Manages transaction manager
+* Declare a platform Transaction Manager Bean (Lot of Implementations to choose)
+* Apply @EnableTransactionManagement
+
