@@ -89,7 +89,7 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * Declare a platform Transaction Manager Bean (Lot of Implementations to choose)
 * Apply @EnableTransactionManagement
 
-####### Propagation Levels
+###### Propagation Levels
 * REQUIRED        : 1) join existing transaction if exists, otherwise create new transaction.
 * REQUIRE_NEW     : 1) suspend existing trsansaction 2) start new transaction 3) resume previous transaction.
 * SUPPORTS        : 1) join exisitng transaction if exists 2 Or do nothing with transaction if no previous transaction exist.
