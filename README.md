@@ -79,7 +79,7 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * @AfterTransaction  : Opposite to above.
 * @Commit : If applied at class level then every test will commit its state
 * @Rollback : It is used to override the test method with default commit state.
-##### Transactions
+##### Transactions (https://docs.spring.io/spring-framework/docs/current/javadoc-api/)
 * A  ====== ALL or Nothing (IMPORTANT). eg customer order -- inventory decution, credit card deduction.
 * C  ====== Integrity constrainst are maintained within the database with every transaction.
 * I  ======  
@@ -88,4 +88,13 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * Apply @Transactional : Manages transaction manager
 * Declare a platform Transaction Manager Bean (Lot of Implementations to choose)
 * Apply @EnableTransactionManagement
+
+####### Propagation Levels
+* REQUIRED        : 1) join existing transaction if exists, otherwise create new transaction.
+* REQUIRE_NEW     : 1) suspend existing trsansaction 2) start new transaction 3) resume previous transaction.
+* SUPPORTS        : 1) join exisitng transaction if exists 2 Or do nothing with transaction if no previous transaction exist.
+* NOT_SUPPORTED   : 1) suspend exisiting trsansaction 2) Run this method without any transaction 3) Resumes previous transaction if exists.
+* MANDATORY       : 1) join existing transaction 2) throw exception if there is no previous trasanction.
+* NEVER           : throw an exception, if the method calling this method is running in a transaction.
+* NESTED          : Similar to REQUIRED, not supported by many vendors.
 
