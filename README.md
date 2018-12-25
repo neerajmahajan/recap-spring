@@ -108,3 +108,16 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * NEVER           : throw an exception, if the method calling this method is running in a transaction.
 * NESTED          : Similar to REQUIRED, not supported by many vendors.
 
+##### JDBC_TEMPLATE (https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/data-access.html#jdbc)
+
+#####
+######  @Service  
+* It is a class which does business logic and boundary for transaction.
+* It is an extenstion of @component but just an marker interface.
+######  @Repository
+* extension of @component.
+* convert object into table rows.
+* data service layer that interact with database.
+####  Profiles (https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition-profiles)
+@PropertySource for injecting values into the environment.
+
