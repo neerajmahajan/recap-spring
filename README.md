@@ -89,6 +89,13 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * Declare a platform Transaction Manager Bean (Lot of Implementations to choose)
 * Apply @EnableTransactionManagement
 
+###### Isolation Level
+* DEFAULT   : 
+* READ_UNCOMMITED : If multiple transactions are working on same row and NOT yet completed, then changes will be visible.
+* READ_COMMITTED  : if multiple transactions are working then the change will be visibile to other transaction only when first transaction has completed. Phantom reads can occur, if after reading data in current transaction, some other transaction has added a record in DB, which satisfies the condition of query which we had run.
+* REPEATABLE_READ : locks the rows which meets the query criteria until the transaction is completed. phantom records can occur.
+* SERIALIZABLE    : locks the whole table. no phantom records.
+
 ###### Propagation Levels
 * REQUIRED        : 1) join existing transaction if exists, otherwise create new transaction.
 * REQUIRE_NEW     : 1) suspend existing trsansaction 2) start new transaction 3) resume previous transaction.
