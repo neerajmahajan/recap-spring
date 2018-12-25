@@ -72,3 +72,10 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 * Aspect : Combines pointcut and advice.
 * Weaving :The process of applying an aspect to our system.
 * use @EnableAspectJAutoProxy : Be default it can proxy interfaces, but if classes needs to be proxied, then cglib library is required.
+
+##### Testing Transactions
+* @Transactional -- If applied at test class level, then every test case will run in a transaction and will rollback it's state when finished.
+* @BeforeTransaction : Can be used to execute code before running the transational test method.
+* @AfterTransaction  : Opposite to above.
+* @Commit : If applied at class level then every test will commit its state
+* @Rollback : It is used to override the test method with default commit state.
