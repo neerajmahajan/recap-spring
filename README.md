@@ -121,3 +121,17 @@ Remeber destroMethod or PreDestroy is called before the object gets destroy.. th
 ####  Profiles (https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition-profiles)
 @PropertySource for injecting values into the environment.
 
+###### Data layer config
+```
+DATA SOURCE
+============
+JPA VENDOR ADAPTOR
+===================
+ENTITY MANAGER FACTORY
+=======================
+PLATFORM TRANSACTION MANAGER
+============================
+
+
+
+
